@@ -1,0 +1,114 @@
+:root {
+    --text-standard: #e29d4f;
+    --hover-button: #c06500;
+    --hover-text: #b56804;
+    --text-white: #ffffff;
+    --background-white: #ffffff;
+    --button: #b56804;
+    --button-hover: #945401;
+}
+
+.title {
+    margin-top: 30px;
+    margin-left: 25px;
+    font-size: 70px;
+    font-weight: 700;
+    color: var(--hover-text);
+}
+
+.book-cad {
+    font-size: 17px;
+    font-weight: 500;
+    color: var(--text-standard);
+    margin-left: 25px;
+}
+
+.button-add-top {
+    padding-top: 8px;
+    padding-bottom: 8px;
+    font-size: 20px;
+    font-weight: 700;
+    background-color: #ffffff;
+    color: var(--hover-text);
+    cursor: pointer;
+    transition: .5s;
+    border: none;
+    margin-top: 60px;
+    margin-left: 25px;
+}
+
+.button-add-top a {
+    border-radius: 7px;
+    border: 1.5px solid var(--button);
+    padding-left: 12px;
+    padding-right: 12px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    text-decoration: none;
+    color: var(--hover-text)
+}
+
+.button-add-top:hover a {
+    transition: .5s;
+    background-color: var(--button);
+    color: #ffffff;
+}
+
+.container-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    margin-top: 35vh;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.button-desc {
+    color: var(--text-standard);
+    font-weight: 600;
+}
+
+.card {
+    border: 1px solid var(--hover-text);
+    border-radius: 8px;
+    width: 250px;
+    margin: 18px;
+    margin-left: 25px;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    gap: 2px;
+}
+
+.title-card {
+    font-size: 18px;
+    text-align: center;
+    color: var(--hover-text);
+    margin-top: 20px;
+}
+
+.button-view {
+    padding: 8px;
+    margin-bottom: 20px;
+    margin-top: 10px;
+    cursor: pointer;
+    background-color: var(--button);
+    border: none;
+    border-radius: 5px;
+}
+
+.button-view a {
+    padding: 8px;
+    padding-right: 59px;
+    padding-left: 59px;
+    border-radius: 5px;
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: 700;
+}
+
+.text-button {
+    display: flex;
+    margin-top: 50px;
+}

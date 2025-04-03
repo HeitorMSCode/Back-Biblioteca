@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %} Back Biblioteca {% endblock %}
+
+{% block css %}
+    <link rel="stylesheet" href="{% static 'css/app-inicio.css' %}">
+{% endblock %}
+
+{% block 'content' %}
+    <!DOCTYPE html>
+    <html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <div class="container-main">
+            <div class="texts">
+                <h1 class="title">Seja <span>bem-vindo</span> a Back Biblioteca tem diversos livros de diversas categorias.</h1>
+                <p class="location"><i class="fa-solid fa-location-dot"></i> Rua Cândida Lopes 60</p>
+            </div>
+            <div class="FirstImg">
+                <img class="img3" src="../static/assets/GirlBook.png" alt="GirlBook">
+            </div>
+            <div class="imgs">
+                <img class="img1" src="../static/assets/bookHearth.png" alt="bookHearth">
+                <img class="img2" src="../static/assets/BookPile.png" alt="BookPile">
+            </div>
+        </div>
+    </body>
+    </html>
+{% endblock %}

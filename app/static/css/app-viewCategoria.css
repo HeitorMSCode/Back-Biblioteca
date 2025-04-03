@@ -1,0 +1,83 @@
+
+:root {
+    --text-standard: #e29d4f;
+    --hover-button: #c06500;
+    --hover-text: #b56804;
+    --text-white: #ffffff;
+    --background-white: #ffffff;
+    --button: #b56804;
+    --button-hover: #945401;
+}
+
+.title {
+    color: var(--hover-text);
+    font-size: 50px;
+    font-weight: 500;
+    text-align: center;
+    margin-top: 90px;
+    margin-bottom: 20px;
+}
+
+.card {
+    border: 1px solid var(--hover-text);
+    border-radius: 8px;
+    width: 250px;
+    margin: 18px;
+    margin-left: 25px;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    gap: 2px;
+}
+
+.title-card {
+    font-size: 18px;
+    text-align: center;
+    color: var(--hover-text);
+    margin-top: 20px;
+}
+
+.img-card {
+    margin-top: 6px;
+    width: 180px;
+    border-radius: 5px;
+    margin-left: 8px;
+}
+
+.autor-card {
+    margin-top: 6px;
+    color: var(--text-standard);
+    margin-left: 8px;
+}
+
+.description {
+    text-decoration: none;
+    margin-top: 7px;
+    margin-bottom: 7px;
+    color: var(--text-standard);
+    margin-left: 8px;
+}
+
+.description span {
+    color: var(--hover-text);
+    text-decoration: underline;
+}
+
+.button-view {
+    padding: 8px;
+    margin-bottom: 20px;
+    cursor: pointer;
+    background-color: var(--button);
+    border: none;
+    border-radius: 5px;
+}
+
+.button-view a {
+    padding: 8px;
+    padding-right: 59px;
+    padding-left: 59px;
+    border-radius: 5px;
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: 700;
+}

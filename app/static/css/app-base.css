@@ -1,0 +1,111 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Inter", serif;
+}
+
+:root {
+    --text-standard: #e29d4f;
+    --hover-button: #c06500;
+    --hover-text: #b56804;
+    --text-white: #ffffff;
+    --background-white: #ffffff;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between; /* space-around / space-between*/
+    width: 100%;
+    position: fixed;
+    z-index: 2;
+    top: 0;
+    left: 0;
+}
+
+#nav.scrolling {
+    background-color: var(--background-white);
+}
+
+.nav-itens {
+    list-style: none;
+    display: flex;
+    padding: 20px;
+    padding-right: 30px;
+    margin-top: 9px;
+}
+
+.nav-itens li {
+    padding-left: 20px;
+}
+
+.nav-itens li a {
+    text-decoration: none;
+    color: var(--text-standard);
+    font-size: 20px;
+    transition: .5s;
+}
+
+.link:hover {
+    color: var(--hover-text);
+}
+
+.logo img {
+    margin: 12px;
+    margin-left: 25px;
+    width: 80px;
+}
+
+.logo a {
+    text-decoration: none;
+    color: var(--text-standard);
+    font-weight: 800;
+    font-size: 25px;
+    margin-left: 5px;
+    margin-top: 15px;
+}
+
+.nav-itens li a.button-login {
+    color: var(--text-standard);
+    padding: 9px 45px;
+    border: 1px solid;
+    cursor: pointer;
+    font-size: 20px;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+.nav-itens li a.button-login:hover {
+    text-decoration: none;
+    color: var(--text-white);
+    padding: 9px 45px;
+    border: 1px solid;
+    cursor: pointer;
+    font-size: 20px;
+    border-radius: 5px;
+    background-color: var(--hover-button);
+}
+
+.nav-itens li a.button-cadastro {
+    color: var(--text-white);
+    background-color: var(--hover-button);
+    padding: 9px 45px;
+    border: 1px solid;
+    cursor: pointer;
+    font-size: 20px;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+.nav-itens li a.button-cadastro:hover {
+    text-decoration: none;
+    color: var(--text-standard);
+    padding: 9px 45px;
+    border: 1px solid;
+    cursor: pointer;
+    font-size: 20px;
+    border-radius: 5px;
+    background-color: var(--background-white);
+}

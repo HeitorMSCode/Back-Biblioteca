@@ -1,0 +1,52 @@
+:root {
+    --text-standard: #e29d4f;
+    --hover-button: #c06500;
+    --hover-text: #b56804;
+    --text-white: #ffffff;
+    --background-white: #ffffff;
+}
+
+.title {
+    margin-top: 280px;
+    width: 550px;
+    font-size: 65px;
+    margin-bottom: 20px;
+    margin-left: 90px;
+    color: var(--text-standard);
+}
+
+.location {
+    margin-left: 90px;
+    font-weight: bold;
+    color: var(--text-standard);
+    width: 200px;
+}
+
+.container-main {
+    display: flex;
+}
+
+.imgs {
+    display: grid;
+    margin-top: 200px;
+    margin-left: 136px;
+}
+
+.img2 {
+    width: 450px;
+}
+
+.img1 {
+    width: 350px;
+    margin-bottom: 20px;
+    margin-left: 100px;
+}
+
+.FirstImg {
+    margin-top: 200px;
+    margin-left: 220px;
+}
+
+.img3 {
+    width: 430px;
+}

@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}  - Back Biblioteca {% endblock %}
+
+{% block css %} <link rel="stylesheet" href="{% static 'css/app-viewLivro.css' %}"> {% endblock %}
+
+{% block 'content' %}
+    <!DOCTYPE html>
+    <html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <div class="container">
+            <div class="flex">
+                <img class="image" src="{% static 'assets/livro.jpg' %}" alt="livro">
+                <div class="texts">
+                    <h2 class="title">Robô Selvagem</h2>
+                    <p class="description">Um livro que fala sobre um robô que foi para em uma floresta, e teve que morar com os animais no local.</p>
+                    <p class="category">Categoria: <span>Infantil</span></p>
+                    <button class="read">Quero Ler</button>
+                </div>
+            </div>
+            
+            
+        </div>
+    </body>
+    </html>
+{% endblock %}

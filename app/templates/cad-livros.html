@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %} Cadastrar livro {% endblock %}
+
+{% block css %}
+    <link rel="stylesheet" href="{% static 'css/app-cadLivros.css' %}">
+{% endblock %}
+
+{% block 'content' %}
+    <!DOCTYPE html>
+    <html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <div class="container">
+            <h1 class="title">Cadastrar</h1>
+            <p class="text">Nome do livro</p>
+            <input type="text" class="input" placeholder="Digite o nome">
+            <p class="text">Nome do Autor</p>
+            <input type="text" class="input" placeholder="Digite o nome">
+            <p class="text">Data de lançamento</p>
+            <input type="date" class="input" name="" id="">
+            <p class="text">Capa do livro</p>
+            <input type="file" class="input" name="" id="">
+            <p class="text">Categoria do livro</p>
+            <input type="text" class="input" placeholder="Digite a categoria">
+            <p class="text">Estante do livro</p>
+            <input type="number" class="input" placeholder="Digite o numero da estante" name="" id="">
+            <a href="{% url 'url_livros' %}"><button class="button">Confirmar</button></a>
+        </div>
+    </body>
+    </html>
+{% endblock %}

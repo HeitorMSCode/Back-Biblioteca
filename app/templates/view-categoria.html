@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %} Livros - Back Biblioteca {% endblock %}
+
+{% block css %} <link rel="stylesheet" href="{% static 'css/app-viewCategoria.css' %}"> {% endblock %}
+
+{% block 'content' %}
+    <!DOCTYPE html>
+    <html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <h1 class="title">Infantil</h1>
+        <hr>
+
+        <div class="card">
+            <h4 class="title-card">Robô Selvagem</h4>
+            <img class="img-card" src="{% static 'assets/livro.jpg' %}" alt="image">
+            <p class="autor-card">Autor: Peter Brown</p>
+            <a href="" class="description"><p>Um livro que fala sobre<br><span>mais...</span></p></a>
+            <button class="button-view"><a href="">Visualizar</a></button>
+        </div>
+    </body>
+    </html>
+{% endblock %}

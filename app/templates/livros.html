@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %} Livros - Back Biblioteca {% endblock %}
+
+{% block css %} <link rel="stylesheet" href="{% static 'css/app-livros.css' %}"> {% endblock %}
+
+{% block 'content' %}
+    <!DOCTYPE html>
+    <html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <div class="text-button">
+            <h1 class="title">Nossos Livros</h1>
+            <div class="container-button-top">
+                <button class="button-add-top"><a href="{% url 'url_cadastrar' %}">+</a></button>
+            </div>
+        </div>
+        <p class="book-cad">Não ha livros cadastrados.</p> <!--Temos 900 livros cadastrados.--> 
+        
+
+        <!--<div class="container-button">
+            <button class="button-add"><a href="{% url 'url_cadastrar' %}">+</a></button>
+            <p class="button-desc">Cadastrar livro</p>
+        </div>-->
+
+        <div class="card">
+            <h4 class="title-card">Robô Selvagem</h4>
+            <img class="img-card" src="{% static 'assets/livro.jpg' %}" alt="image">
+            <p class="autor-card">Autor: Peter Brown</p>
+            <a href="" class="description"><p>Um livro que fala sobre<br><span>mais...</span></p></a>
+            <button class="button-view"><a href="{% url 'url_viewLivro' %}">Visualizar</a></button>
+        </div>
+    </body>
+    </html>
+{% endblock %}
