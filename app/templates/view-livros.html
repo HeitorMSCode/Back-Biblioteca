@@ -15,10 +15,9 @@
     <body>
         <div class="container">
             <div class="flex">
-                <img class="image" src="{% static 'assets/livro.jpg' %}" alt="livro">
+                <img class="image" src="{{livro_encontrado.capa_do_livro.url}}" alt="livro">
                 <div class="texts">
-                    <h2 class="title">Robô Selvagem</h2>
-                    <p class="description">Um livro que fala sobre um robô que foi para em uma floresta, e teve que morar com os animais no local.</p>
+                    <h2 class="title">{{livro_encontrado.nome_do_livro}}</h2>
                     <p class="category">Categoria: <span>Infantil</span></p>
                     <button class="read">Quero Ler</button>
                 </div>

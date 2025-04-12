@@ -15,25 +15,37 @@
     <body>
         <div class="text-button">
             <h1 class="title">Nossos Livros</h1>
-            <div class="container-button-top">
-                <button class="button-add-top"><a href="{% url 'url_cadastrar' %}">+</a></button>
+            {% if livros %}
+                <div class="container-button-top">
+                    <button class="button-add-top"><a href="{% url 'url_cadastrar' %}">+</a></button>
+                </div>
+            {% endif %}
+        </div>
+
+        <div class="livros">
+
+            {% for livro in livros %}
+            
+            <div class="card">
+                <h4 class="title-card">{{livro.nome_do_livro}}</h4>
+                <img class="img-card" src="{{livro.capa_do_livro.url}}" alt="image">
+                <p class="autor-card">{{livro.nome_do_autor}}</p>
+                <p class="description">{{livro.data_lancamento}}</p>
+                <button class="button-view"><a href="{% url 'url_viewLivro' livro.pk %}">Visualizar</a></button>
             </div>
+            
+            {% empty %}
+            
+            <p class="book-cad">Não ha livros cadastrados.</p>
+            <div class="container-button">
+                <button class="button-add"><a href="{% url 'url_cadastrar' %}">+</a></button>
+                <p class="button-desc">Cadastrar livro</p>
+            </div>
+            
+            {% endfor %}
+            
         </div>
-        <p class="book-cad">Não ha livros cadastrados.</p> <!--Temos 900 livros cadastrados.--> 
-        
 
-        <!--<div class="container-button">
-            <button class="button-add"><a href="{% url 'url_cadastrar' %}">+</a></button>
-            <p class="button-desc">Cadastrar livro</p>
-        </div>-->
-
-        <div class="card">
-            <h4 class="title-card">Robô Selvagem</h4>
-            <img class="img-card" src="{% static 'assets/livro.jpg' %}" alt="image">
-            <p class="autor-card">Autor: Peter Brown</p>
-            <a href="" class="description"><p>Um livro que fala sobre<br><span>mais...</span></p></a>
-            <button class="button-view"><a href="{% url 'url_viewLivro' %}">Visualizar</a></button>
-        </div>
     </body>
     </html>
 {% endblock %}

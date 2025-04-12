@@ -4,23 +4,26 @@
 {% block title %} Cadastrar livro {% endblock %}
 
 {% block css %}
-    <link rel="stylesheet" href="{% static 'css/app-cadCategoria.css' %}">
+<link rel="stylesheet" href="{% static 'css/app-cadCategoria.css' %}">
 {% endblock %}
 
 {% block 'content' %}
-    <!DOCTYPE html>
-    <html lang="pt-br">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    </head>
-    <body>
-        <div class="container">
-            <h1 class="title">Cadastrar</h1>
-            <p class="text">Nome da Categoria</p>
-            <input type="text" class="input" placeholder="Digite o nome">
-            <a href="{% url 'url_livros' %}"><button class="button">Confirmar</button></a>
+<div class="container">
+    <form method="post" enctype="multipart/form-data" class="form-box">
+        {% csrf_token %}
+
+        {% for field in formulario %}
+
+        <div class="form-group">
+            <label for="{{ field.id_for_label }}">{{ field.label }}</label>
+            {{ field }}
+            {% if field.errors %}
+            <div class="error">{{ field.errors }}</div>
+            {% endif %}
         </div>
-    </body>
-    </html>
+        {% endfor %}
+
+        <button type="submit" class="button">Confirmar</button>
+    </form>
+</div>
 {% endblock %}

@@ -9,5 +9,6 @@ urlpatterns = [
     path('cadastrar_categoria/',cadCategoria, name="url_cadCategoria"),
     path('categorias/',categoria, name="url_categoria"),
     path('visualizar_categoria',viewCategoria, name="url_viewCategoria"),
-    path('visualizar_livro',viewLivro, name="url_viewLivro"),
+    path('visualizar_livro/<int:pk>',viewLivro, name="url_viewLivro"),
 ]
+

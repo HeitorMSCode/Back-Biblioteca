@@ -3,34 +3,31 @@
 
 {% block title %} Livros - Back Biblioteca {% endblock %}
 
-{% block css %} <link rel="stylesheet" href="{% static 'css/app-categoria.css' %}"> {% endblock %}
+{% block css %}
+<link rel="stylesheet" href="{% static 'css/app-categoria.css' %}">
+{% endblock %}
 
 {% block 'content' %}
-    <!DOCTYPE html>
-    <html lang="pt-br">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    </head>
-    <body>
-        <div class="text-button">
-            <h1 class="title">Nossas Categorias</h1>
-            <div class="container-button-top">
-                <button class="button-add-top"><a href="{% url 'url_cadCategoria' %}">+</a></button>
-            </div>
-        </div>
-        <p class="book-cad">Não ha livros cadastrados.</p> <!--Temos 900 livros cadastrados.--> 
-        
+<div class="text-button">
+    <h1 class="title">Nossas Categorias</h1>
+    <div class="container-button-top">
+        <button class="button-add-top"><a href="{% url 'url_cadCategoria' %}">+</a></button>
+    </div>
+</div>
+<p class="book-cad">Não ha livros cadastrados.</p> <!--Temos 900 livros cadastrados.-->
 
-        <!--<div class="container-button">
+
+<!--<div class="container-button">
             <button class="button-add"><a href="{% url 'url_cadastrar' %}">+</a></button>
             <p class="button-desc">Cadastrar livro</p>
         </div>-->
 
-        <div class="card">
-            <h4 class="title-card">Infantil</h4>
-            <button class="button-view"><a href="{% url 'url_viewCategoria' %}">Visualizar</a></button>
-        </div>
-    </body>
-    </html>
+{% for categoria in categorias_adicionadas %}        
+<div class="card">
+    <h4 class="title-card">{{categoria.nome}}</h4>
+    <button class="button-view"><a href="{% url 'url_viewCategoria' %}">Visualizar</a></button>
+</div>
+{% endfor %}
+
+
 {% endblock %}
