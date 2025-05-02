@@ -13,6 +13,10 @@ class Livro(models.Model):
     categoria = models.ManyToManyField(Categoria)
     estante_do_livro = models.IntegerField(verbose_name="Numeração da estante")
 
+class Ajuda(models.Model):
+    titulo = models.CharField(verbose_name="Titulo da sua Duvida", max_length=220)
+    descricao = models.CharField(verbose_name="Descição da Duvida", max_length=750)
+
 # nome do livro
 # nome do autor
 # data de lançamento

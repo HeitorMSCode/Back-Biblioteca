@@ -25,7 +25,7 @@
 {% for categoria in categorias_adicionadas %}        
 <div class="card">
     <h4 class="title-card">{{categoria.nome}}</h4>
-    <button class="button-view"><a href="{% url 'url_viewCategoria' %}">Visualizar</a></button>
+    <button class="button-view"><a href="{% url 'url_viewCategoria' categoria.pk %}">Visualizar</a></button>
 </div>
 {% endfor %}
 

@@ -1,5 +1,5 @@
 from django import forms
-from .models import Categoria,Livro
+from .models import Categoria,Livro,Ajuda
 
 class FormLivro(forms.ModelForm):
     class Meta:
@@ -9,4 +9,9 @@ class FormLivro(forms.ModelForm):
 class FormCategoria(forms.ModelForm):
     class Meta:
         model = Categoria
+        fields = '__all__'
+
+class FormAjuda(forms.ModelForm):
+    class Meta:
+        model = Ajuda
         fields = '__all__'

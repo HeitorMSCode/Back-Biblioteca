@@ -1,6 +1,6 @@
 from django.shortcuts import render, redirect
-from .models import Categoria, Livro
-from .forms import FormLivro, FormCategoria
+from .models import Categoria, Livro, Ajuda
+from .forms import FormLivro, FormCategoria, FormAjuda
 
 def inicio(request):
     return render(request,'inicio.html')
@@ -50,6 +50,32 @@ def cadCategoria(request):
 
     return render(request, 'cad-categoria.html', contexto)
 
+def ajuda(request):
+    
+    if request.method == 'POST':
+        form = FormAjuda(request.POST)
+        if form.is_valid():
+            form.save()
+    else:
+        form = FormAjuda()
+
+    contexto = {
+        "formulario":form
+    }
+
+    return render(request,'ajuda.html', contexto)
+
+def buscarLivroPorCategoria(request,pk):
+    buscar = Livro.objects.filter(categoria = pk)
+    categoria = Categoria.objects.get(pk = pk)
+
+    contexto = {
+        "buscar_por_livros": buscar,
+        "categoria": categoria
+    }
+
+    return render(request, 'view-categoria.html', contexto)
+
 def categoria(request):
     todas_categorias = Categoria.objects.all()
 
@@ -59,9 +85,6 @@ def categoria(request):
 
     return render(request,'categorias.html', contexto)
 
-def viewCategoria(request):
-    return render(request,'view-categoria.html')
-
 def viewLivro(request,pk):
     livro = Livro.objects.get(pk = pk)
 
@@ -70,3 +93,12 @@ def viewLivro(request,pk):
     }
 
     return render(request,'view-livros.html', contexto)
+
+def viewAjuda(request):
+    ajuda = Ajuda.objects.all()
+
+    contexto = {
+        "vizualizar_ajudas": ajuda
+    }
+
+    return render(request,'view-ajudas.html', contexto)
