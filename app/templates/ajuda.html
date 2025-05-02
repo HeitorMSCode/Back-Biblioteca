@@ -1,19 +1,17 @@
 {% extends 'base.html' %}
 {% load static %}
 
-{% block title %} Cadastrar livro {% endblock %}
 
 {% block css %}
-<link rel="stylesheet" href="{% static 'css/app-cadCategoria.css' %}">
+<link rel="stylesheet" href="{% static 'css/app-cadLivros.css' %}">
 {% endblock %}
 
 {% block 'content' %}
 <div class="container">
-    <form method="post" enctype="multipart/form-data" class="form-box">
+    <form method="POST">
         {% csrf_token %}
 
         {% for field in formulario %}
-
         <div class="form-group">
             <label for="{{ field.id_for_label }}">{{ field.label }}</label>
             {{ field }}
@@ -23,7 +21,10 @@
         </div>
         {% endfor %}
 
-        <button type="submit" class="button">Confirmar</button>
+        <button type="submit">Mardar duvida</button>
     </form>
 </div>
+
+<a href="{% url 'url_viewAjuda' %}">Ir para os vizualizações.</a>
+
 {% endblock %}

@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block css %}
+<link rel="stylesheet" href="{% static 'css/app-viewLivro.css' %}">
+{% endblock %}
+
+{% block 'content' %}
+    <div class="container">
+        {% for ajuda in vizualizar_ajudas %}
+        <div class="card">
+            <h4 class="title-card">{{ajuda.titulo}}</h4>
+            <p class="description">{{ajuda.descricao}}</p>
+            <button class="button-view"><a href="#">Visualizar</a></button>
+        </div>
+
+        {% empty %}
+        <h1 class="title-card">Nenhuma duvida registrada!</h1>
+        {% endfor %}
+    </div>
+{% endblock %}

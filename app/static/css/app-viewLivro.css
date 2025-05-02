@@ -66,3 +66,25 @@
 .read:hover {
     background-color: var(--button-hover);
 }
+
+.excluir {
+    background-color: #c22323;
+    color: #ffffff;
+    font-size: 15px;
+    padding: 15px;
+    border: #c22323 1px solid;
+    border-radius: 3px;
+    padding-left: 25px;
+    padding-right: 25px;
+    margin-left: 15px;
+    cursor: pointer;
+    transition: .2s;
+    font-weight: 500;
+}
+
+.excluir:hover {
+    background-color: #ffffff;
+    color: #c22323;
+    border: #c22323 1px solid;
+    font-weight: 500;
+}
